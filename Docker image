@@ -1,0 +1,12 @@
+Docker image
+FROM node:18
+
+WORKDIR /app
+
+COPY LICENSE .
+COPY package.json .
+COPY . .
+
+RUN npm install
+
+CMD ["node", "index.js"]
